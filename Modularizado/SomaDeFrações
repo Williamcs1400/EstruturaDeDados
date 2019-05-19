@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include "headers.h"
+
+int main(){
+    int flag;
+    Racional var1, var2, result;
+
+    do{
+        printf("Digite uma fracao no formato X/Y:\n");
+        scanf("%d/%d", &var1.numerador, &var1.denominador);
+        if(var1.denominador == 0){
+            printf("Digte um denominador valido.\n");
+        }
+        else 
+            flag = 1;
+    }while(flag == 0);
+
+    flag = 0;
+
+    do{
+        printf("Digite uma fracao no formato X/Y:\n");
+        scanf("%d/%d", &var2.numerador, &var2.denominador);
+        if(var2.denominador == 0){
+            printf("Digte um denominador valido.\n");
+        }
+        else 
+            flag = 1;
+    }while(flag == 0);
+
+    result = Adicao(var1, var2);
+    Imprimir(result, 0);
+
+    result = Multiplicacao(var1, var2);
+    Imprimir(result, 1);
+
+    return 0;    
+}
